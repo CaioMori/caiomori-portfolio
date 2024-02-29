@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "San Francisco";
+  src: url("/assets/fonts/san_francisco.otf") format("otf");
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: "San Francisco", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-image: url("assets/images/wallpaper.jpg"); /* Substitua 'seu-fundo-de-tela.jpg' pelo caminho para a imagem do seu fundo de tela */
+  background-attachment: fixed;
+  background-size: cover; /* Para cobrir toda a tela */
+  background-position: center; /* Centralizar a imagem */
+  background-repeat: no-repeat; /* Não repetir a imagem */
+  overflow: hidden;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 3px 20px;
+  display: flex;
+  font-size: 14px;
+  flex-direction: row;
+  align-items: center;
+  cursor: default;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  cursor: default;
+  padding: 5px 10px;
+}
+
+header a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.right-menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-menu img {
+  width: 16px;
+  height: 16px;
+  user-select: none;
+}
+
+.name {
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.logo {
+  margin-right: 20px;
+  align-self: center;
+  justify-self: center;
+  font-size: 16px;
+  user-select: none;
+}
+
+#data-hora {
+  align-self: center;
+  justify-self: center;
+  user-select: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .right-menu,
+  .right,
+  .divider,
+  .logo {
+    display: none !important;
+  }
+  .name {
+    font-size: 16px !important;
+    margin-left: 8px;
+  }
+  h1 {
+    font-size: 24px !important;
+  }
+  header {
+    padding: 0;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 50px;
+}
+
+.card {
+  background-color: rgba(13, 99, 116, 0.6);
+  padding: 0 15px;
+  border-radius: 20px;
+  height: 70vh;
+  width: 90vw;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.divider {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 95%;
+}
+
+.left {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.right {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.left h1 {
+  display: flex;
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  justify-content: center;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 16px;
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0 15px;
+  border-radius: 20px;
+  height: 75px;
+  width: 71%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+footer::before {
+  background: radial-gradient(
+    400px at var(--mouse-x, 0) var(--mouse-y, 0),
+    rgba(255, 255, 255, 0.1),
+    transparent 40%
+  );
+  border-radius: inherit;
+  z-index: 2;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  content: "";
+  left: 0;
+  top: 0;
+}
